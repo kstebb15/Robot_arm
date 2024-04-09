@@ -46,7 +46,8 @@
     </collision>
   </link>
 
-  <joint name="joint_to_DOF1" type="continuous">
+  <joint name="joint_to_DOF1" type="revolute">
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <parent link="base_link"/>
     <child link="DOF1"/>
     <origin xyz= "0 0 0.16740000128"/>
@@ -103,7 +104,7 @@
   </link>
 
   <joint name="joint_to_Arm1" type="revolute">
-    <limit effort="1000.0" lower="-3" upper="0.05" velocity="0.5"/>
+    <limit effort="1000.0" lower="-2.26893" upper="0" velocity="0.5"/>
     <parent link="Arm_box1"/>
     <child link="Arm1"/>
     <origin xyz= "0 0 0"/>
@@ -159,7 +160,7 @@
   </link>
 
   <joint name="joint_to_Arm2" type="revolute">
-    <limit effort="1000.0" lower="-2.25" upper="3" velocity="0.5"/>
+    <limit effort="1000.0" lower="-0.698132" upper="1.5708" velocity="0.5"/>
     <parent link="Arm_box2"/>
     <child link="Arm2"/>
     <origin xyz= "0 0 0"/>
@@ -215,7 +216,7 @@
   </link>
 
   <joint name="joint_to_Arm3" type="revolute">
-    <limit effort="1000.0" lower="-2.6" upper="2.25" velocity="0.5"/>
+    <limit effort="1000.0" lower="-0.698132" upper="1.5708" velocity="0.5"/>
     <parent link="Arm_box3"/>
     <child link="Arm3"/>
     <origin xyz= "0 0 0"/>
