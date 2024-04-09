@@ -62,14 +62,14 @@
     <visual>
       <origin xyz= "0 0 0.00"/>
       <geometry>
-       <box size="0.1 0.1 0.05"/>
+       <box size="0.109253 0.09036 0.06535"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <origin xyz= "0 0 0.00"/>
+      <origin xyz= "0 0 0.0"/>
       <geometry>
-         <box size="0.1 0.1 0.05"/>
+         <box size="0.109253 0.09036 0.06535"/>
       </geometry>
     </collision>
   </link>
@@ -77,25 +77,25 @@
   <joint name="joint_to_Arm_box1" type="fixed">
     <parent link="DOF1"/>
     <child link="Arm_box1"/>
-    <origin xyz= "0 0 0.05"/>
+    <origin xyz= "0 0 0.04448"/>
     <axis xyz= "0 0 1"/>
   </joint>
 
 <link name="Arm1">
   <inertial>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <mass value="10"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <geometry>
        <box size="0.365 0.02 0.02"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <geometry>
          <box size="0.365 0.02 0.02"/>
       </geometry>
@@ -119,14 +119,14 @@
     <visual>
       <origin xyz= "0 0 0"/>
       <geometry>
-       <box size="0.1 0.1 0.05"/>
+       <box size="0.109253 0.09036 0.06535"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
       <origin xyz= "0 0 0"/>
       <geometry>
-         <box size="0.1 0.1 0.05"/>
+         <box size="0.109253 0.09036 0.06535"/>
       </geometry>
     </collision>
   </link>
@@ -139,19 +139,19 @@
 
 <link name="Arm2">
   <inertial>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <mass value="10"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <geometry>
        <box size="0.365 0.02 0.02"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <geometry>
          <box size="0.365 0.02 0.02"/>
       </geometry>
@@ -175,14 +175,14 @@
     <visual>
       <origin xyz= "0 0 0"/>
       <geometry>
-       <box size="0.1 0.1 0.05"/>
+       <box size="0.109253 0.09036 0.06535"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
       <origin xyz= "0 0 0"/>
       <geometry>
-         <box size="0.1 0.1 0.05"/>
+         <box size="0.109253 0.09036 0.06535"/>
       </geometry>
     </collision>
   </link>
@@ -195,19 +195,19 @@
 
 <link name="Arm3">
   <inertial>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <mass value="10"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "0.19677 0 0"/>
       <geometry>
        <box size="0.365 0.02 0.02"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <origin xyz= "0.1925 0 0"/>
+      <origin xyz= "00.19677 0 0"/>
       <geometry>
         <box size="0.365 0.02 0.02"/>
       </geometry>
