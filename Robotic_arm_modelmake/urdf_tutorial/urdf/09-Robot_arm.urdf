@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<robot name="Robotarm">
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <link name="base_link">
+   <inertial>
+      <origin xyz= "0 0 0"/>
+      <mass value="1000"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0 0 0.0962"/>
+      <geometry>
+        <box size="0.4572 0.34480000128 0.19240000128"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0.0962"/>
+      <geometry>
+         <box size="0.4572 0.34480000128 0.19240000128"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="DOF1">
+    <inertial>
+      <origin xyz= "0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+     <collision>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+         <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_DOF1" type="revolute">
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
+    <parent link="base_link"/>
+    <child link="DOF1"/>
+    <origin xyz= "0 0 0.16740000128"/>
+    <axis xyz= "0 0 1"/>
+  </joint>
+
+<link name="Arm_box1">
+  <inertial>
+      <origin xyz= "0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0 0 0.00"/>
+      <geometry>
+       <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0.0"/>
+      <geometry>
+         <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm_box1" type="fixed">
+    <parent link="DOF1"/>
+    <child link="Arm_box1"/>
+    <origin xyz= "0 0 0.04448"/>
+    <axis xyz= "0 0 1"/>
+  </joint>
+
+<link name="Arm1">
+  <inertial>
+      <origin xyz= "0.19677 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0.19677 0 0"/>
+      <geometry>
+       <box size="0.42 0.02 0.02"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0.19677 0 0"/>
+      <geometry>
+         <box size="0.42 0.02 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm1" type="revolute">
+    <limit effort="1000.0" lower="-2.26893" upper="0" velocity="0.5"/>
+    <parent link="Arm_box1"/>
+    <child link="Arm1"/>
+    <origin xyz= "0 0 0"/>
+    <axis xyz= "0 1 0"/>
+  </joint>
+
+<link name="Arm_box2">
+  <inertial>
+      <origin xyz= "0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+       <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+         <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm_box2" type="fixed">
+    <parent link="Arm1"/>
+    <child link="Arm_box2"/>
+    <origin xyz= "0.3524635 0 -0.042675"/>
+  </joint>
+
+<link name="Arm2">
+  <inertial>
+      <origin xyz= "0.19677 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0.19677 0 0"/>
+      <geometry>
+       <box size="0.42 0.02 0.02"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0.19677 0 0"/>
+      <geometry>
+         <box size="0.42 0.02 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm2" type="revolute">
+    <limit effort="1000.0" lower="-0.698132" upper="1.5708" velocity="0.5"/>
+    <parent link="Arm_box2"/>
+    <child link="Arm2"/>
+    <origin xyz= "0 0 0"/>
+    <axis xyz= "0 1 0"/>
+  </joint>
+
+<link name="Arm_box3">
+  <inertial>
+      <origin xyz= "0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+       <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0"/>
+      <geometry>
+         <box size="0.109253 0.09036 0.06535"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm_box3" type="fixed">
+    <parent link="Arm2"/>
+    <child link="Arm_box3"/>
+    <origin xyz= "0.3524635 0 0.042675"/>
+  </joint>
+
+<link name="Arm3">
+  <inertial>
+      <origin xyz= "0.19677 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz= "0.19677 0 0"/>
+      <geometry>
+       <box size="0.42 0.02 0.02"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "00.19677 0 0"/>
+      <geometry>
+        <box size="0.42 0.02 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_to_Arm3" type="revolute">
+    <limit effort="1000.0" lower="-0.698132" upper="1.5708" velocity="0.5"/>
+    <parent link="Arm_box3"/>
+    <child link="Arm3"/>
+    <origin xyz= "0 0 0"/>
+    <axis xyz= "0 1 0"/>
+  </joint>
+
+
+
+<transmission name="link_1_trans">
+	<type>transmission_interface/SimpleTransmission</type>
+	<joint name="joint_to_DOF1">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+	</joint>
+	<actuator name="link_1_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+  </transmission>
+
+  <transmission name="link_2_trans">
+	<type>transmission_interface/SimpleTransmission</type>
+	<joint name="joint_to_Arm1">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+	</joint>
+	<actuator name="link_2_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+  </transmission>
+
+  <transmission name="link_3_trans">
+	<type>transmission_interface/SimpleTransmission</type>
+	<joint name="joint_to_Arm2">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+	</joint>
+	<actuator name="link_3_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+  </transmission>
+
+  <transmission name="link_4_trans">
+	<type>transmission_interface/SimpleTransmission</type>
+	<joint name="joint_to_Arm3">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+	</joint>
+	<actuator name="link_4_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+  </transmission>
+
+  <gazebo reference="Robot_arm">
+   <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <gazebo>
+	<plugin name="control" filename="libgazebo_ros_control.so">
+		<robotNamespace>/</robotNamespace>
+	</plugin>
+  </gazebo>
+</robot>
